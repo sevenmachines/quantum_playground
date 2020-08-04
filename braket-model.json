@@ -1,0 +1,1541 @@
+{
+  "version" : "2.0",
+  "metadata" : {
+    "apiVersion" : "2019-09-01",
+    "endpointPrefix" : "aqx",
+    "jsonVersion" : "1.1",
+    "protocol" : "rest-json",
+    "serviceFullName" : "Braket",
+    "serviceId" : "Braket",
+    "signatureVersion" : "v4",
+    "signingName" : "aqx",
+    "uid" : "braket-2019-09-01"
+  },
+  "documentation" : null,
+  "operations" : {
+    "CancelQuantumTask" : {
+      "name" : "CancelQuantumTask",
+      "http" : {
+        "method" : "PUT",
+        "requestUri" : "/quantum-tasks/{quantumTaskArn}/state",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "CancelQuantumTaskRequest"
+      },
+      "output" : {
+        "shape" : "CancelQuantumTaskResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "ConflictException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ResourceNotFoundException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ],
+      "idempotent" : true
+    },
+    "CreateQuantumJob" : {
+      "name" : "CreateQuantumJob",
+      "http" : {
+        "method" : "POST",
+        "requestUri" : "/quantum-job",
+        "responseCode" : 201
+      },
+      "input" : {
+        "shape" : "CreateQuantumJobRequest"
+      },
+      "output" : {
+        "shape" : "CreateQuantumJobResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "ConflictException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ServiceQuotaExceededException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "CreateQuantumTask" : {
+      "name" : "CreateQuantumTask",
+      "http" : {
+        "method" : "POST",
+        "requestUri" : "/quantum-tasks",
+        "responseCode" : 201
+      },
+      "input" : {
+        "shape" : "CreateQuantumTaskRequest"
+      },
+      "output" : {
+        "shape" : "CreateQuantumTaskResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ServiceQuotaExceededException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "DescribeQpus" : {
+      "name" : "DescribeQpus",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/qpus",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "DescribeQpusRequest"
+      },
+      "output" : {
+        "shape" : "DescribeQpusResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "DescribeQuantumSimulators" : {
+      "name" : "DescribeQuantumSimulators",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/quantum-simulator",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "DescribeQuantumSimulatorsRequest"
+      },
+      "output" : {
+        "shape" : "DescribeQuantumSimulatorsResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "GetQuantumJob" : {
+      "name" : "GetQuantumJob",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/quantum-job/{quantumJobArn}",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "GetQuantumJobRequest"
+      },
+      "output" : {
+        "shape" : "GetQuantumJobResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ResourceNotFoundException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "GetQuantumTask" : {
+      "name" : "GetQuantumTask",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/quantum-tasks/{quantumTaskArn}",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "GetQuantumTaskRequest"
+      },
+      "output" : {
+        "shape" : "GetQuantumTaskResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ResourceNotFoundException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "ListQuantumJobs" : {
+      "name" : "ListQuantumJobs",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/quantum-job",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "ListQuantumJobsRequest"
+      },
+      "output" : {
+        "shape" : "ListQuantumJobsResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "ListQuantumTasks" : {
+      "name" : "ListQuantumTasks",
+      "http" : {
+        "method" : "GET",
+        "requestUri" : "/quantum-tasks",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "ListQuantumTasksRequest"
+      },
+      "output" : {
+        "shape" : "ListQuantumTasksResponse"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ]
+    },
+    "StopQuantumJob" : {
+      "name" : "StopQuantumJob",
+      "http" : {
+        "method" : "PUT",
+        "requestUri" : "/quantum-job/{quantumJobArn}/state",
+        "responseCode" : 200
+      },
+      "input" : {
+        "shape" : "StopQuantumJobRequest"
+      },
+      "errors" : [
+        {
+          "shape" : "AccessDeniedException"
+        },
+        {
+          "shape" : "InternalServiceException"
+        },
+        {
+          "shape" : "ResourceNotFoundException"
+        },
+        {
+          "shape" : "ThrottlingException"
+        },
+        {
+          "shape" : "ValidationException"
+        }
+      ],
+      "idempotent" : true
+    }
+  },
+  "shapes" : {
+    "DWavePostprocessingType" : {
+      "type" : "string",
+      "enum" : [
+        "optimization",
+        "sampling"
+      ]
+    },
+    "IrType" : {
+      "type" : "string",
+      "enum" : [
+        "annealing",
+        "jaqcd"
+      ]
+    },
+    "InternalServiceException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "InternalServiceException",
+        "httpStatusCode" : 500,
+        "fault" : true
+      }
+    },
+    "QuantumJobParameters" : {
+      "type" : "map",
+      "key" : {
+        "shape" : "String"
+      },
+      "value" : {
+        "shape" : "String"
+      },
+      "min" : 0,
+      "max" : 50
+    },
+    "IntegerListList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "IntegerList"
+      }
+    },
+    "AccessDeniedException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "AccessDeniedException",
+        "httpStatusCode" : 403,
+        "senderFault" : true
+      }
+    },
+    "ListQuantumTasksMaxResults" : {
+      "type" : "integer",
+      "min" : 1,
+      "max" : 100
+    },
+    "QuantumTaskStatus" : {
+      "type" : "string",
+      "enum" : [
+        "cancelled",
+        "cancelling",
+        "completed",
+        "created",
+        "failed",
+        "initialized",
+        "initializing",
+        "queued",
+        "queuing",
+        "running"
+      ]
+    },
+    "Long" : {
+      "type" : "long",
+      "box" : true
+    },
+    "IntegerPair" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "Integer"
+      },
+      "min" : 2,
+      "max" : 2
+    },
+    "StringList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "String"
+      }
+    },
+    "QpuStatus" : {
+      "type" : "string",
+      "enum" : [
+        "available",
+        "unavailable"
+      ]
+    },
+    "ListQuantumTasksResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTasks"
+      ],
+      "members" : {
+        "nextToken" : {
+          "shape" : "String"
+        },
+        "quantumTasks" : {
+          "shape" : "FrontendQuantumTaskSummaryList"
+        }
+      }
+    },
+    "QuantumJobStoppingCondition" : {
+      "type" : "structure",
+      "required" : [
+        "maxRuntimeInSeconds"
+      ],
+      "members" : {
+        "maxRuntimeInSeconds" : {
+          "shape" : "Integer"
+        }
+      }
+    },
+    "ValidationException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "ValidationException",
+        "httpStatusCode" : 400,
+        "senderFault" : true
+      }
+    },
+    "CreateQuantumTaskRequest" : {
+      "type" : "structure",
+      "required" : [
+        "backendArn",
+        "clientToken",
+        "ir",
+        "irType",
+        "resultsS3Bucket",
+        "resultsS3Prefix",
+        "shots"
+      ],
+      "members" : {
+        "backendArn" : {
+          "shape" : "Arn"
+        },
+        "backendParameters" : {
+          "shape" : "BackendParameters"
+        },
+        "clientToken" : {
+          "shape" : "String64",
+          "idempotencyToken" : true
+        },
+        "ir" : {
+          "shape" : "String"
+        },
+        "irType" : {
+          "shape" : "IrType"
+        },
+        "resultsS3Bucket" : {
+          "shape" : "String"
+        },
+        "resultsS3Prefix" : {
+          "shape" : "String"
+        },
+        "shots" : {
+          "shape" : "Integer"
+        }
+      }
+    },
+    "CreateQuantumTaskResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTaskArn",
+        "status"
+      ],
+      "members" : {
+        "quantumTaskArn" : {
+          "shape" : "Arn"
+        },
+        "status" : {
+          "shape" : "QuantumTaskStatus"
+        }
+      }
+    },
+    "StopQuantumJobRequest" : {
+      "type" : "structure",
+      "required" : [
+        "quantumJobArn"
+      ],
+      "members" : {
+        "quantumJobArn" : {
+          "shape" : "Arn",
+          "location" : "uri",
+          "locationName" : "quantumJobArn"
+        }
+      }
+    },
+    "ListQuantumJobsResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumJobs"
+      ],
+      "members" : {
+        "nextToken" : {
+          "shape" : "String"
+        },
+        "quantumJobs" : {
+          "shape" : "QuantumJobsSummaryList"
+        }
+      }
+    },
+    "GateModelProperties" : {
+      "type" : "structure",
+      "members" : {
+        "connectivity" : {
+          "shape" : "QuantumDeviceConnectivity"
+        },
+        "qubitCount" : {
+          "shape" : "Integer"
+        },
+        "supportedQuantumOperations" : {
+          "shape" : "StringList"
+        }
+      }
+    },
+    "CancelQuantumTaskRequest" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTaskArn"
+      ],
+      "members" : {
+        "clientToken" : {
+          "shape" : "String64",
+          "idempotencyToken" : true
+        },
+        "quantumTaskArn" : {
+          "shape" : "Arn",
+          "location" : "uri",
+          "locationName" : "quantumTaskArn"
+        }
+      }
+    },
+    "FrontendQuantumTaskSummaryList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "FrontendQuantumTaskSummary"
+      }
+    },
+    "DWaveTopology" : {
+      "type" : "structure",
+      "members" : {
+        "shape" : {
+          "shape" : "IntegerList"
+        },
+        "type" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "QpuProperties" : {
+      "type" : "structure",
+      "members" : {
+        "annealingModelProperties" : {
+          "shape" : "AnnealingModelProperties"
+        },
+        "gateModelProperties" : {
+          "shape" : "GateModelProperties"
+        }
+      }
+    },
+    "ResourceNotFoundException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "ResourceNotFoundException",
+        "httpStatusCode" : 404,
+        "senderFault" : true
+      }
+    },
+    "DWaveResultFormat" : {
+      "type" : "string",
+      "enum" : [
+        "default",
+        "histogram"
+      ]
+    },
+    "S3DataType" : {
+      "type" : "string",
+      "enum" : [
+        "augmented-manifest-file",
+        "manifest-file",
+        "s3-prefix"
+      ]
+    },
+    "IntegerPairList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "IntegerPair"
+      }
+    },
+    "S3SourceConfig" : {
+      "type" : "structure",
+      "required" : [
+        "scriptS3Bucket",
+        "scriptS3ObjectKey"
+      ],
+      "members" : {
+        "scriptS3Bucket" : {
+          "shape" : "String"
+        },
+        "scriptS3ObjectKey" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "QuantumJobsSummaryList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "QuantumJobSummary"
+      }
+    },
+    "DescribeQuantumSimulatorsRequest" : {
+      "type" : "structure",
+      "members" : {
+        "maxResults" : {
+          "shape" : "Integer",
+          "location" : "querystring",
+          "locationName" : "maxResults",
+          "min" : 1,
+          "max" : 10
+        },
+        "nextToken" : {
+          "shape" : "String",
+          "location" : "querystring",
+          "locationName" : "nextToken"
+        },
+        "quantumSimulatorArns" : {
+          "shape" : "ArnList",
+          "location" : "querystring",
+          "locationName" : "quantumSimulatorArns",
+          "min" : 1,
+          "max" : 10
+        }
+      }
+    },
+    "ThrottlingException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "ThrottlingException",
+        "httpStatusCode" : 429,
+        "senderFault" : true
+      }
+    },
+    "ResourceConfig" : {
+      "type" : "structure",
+      "required" : [
+        "instanceCount",
+        "instanceType",
+        "volumeSizeInGb"
+      ],
+      "members" : {
+        "instanceCount" : {
+          "shape" : "Integer"
+        },
+        "instanceType" : {
+          "shape" : "String"
+        },
+        "volumeKmsKeyId" : {
+          "shape" : "String"
+        },
+        "volumeSizeInGb" : {
+          "shape" : "Integer"
+        }
+      }
+    },
+    "QuantumJobPrimaryStatus" : {
+      "type" : "string",
+      "enum" : [
+        "Failed",
+        "completed",
+        "in-progress",
+        "stopped",
+        "stopping"
+      ]
+    },
+    "DescribeQuantumSimulatorsResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumSimulators"
+      ],
+      "members" : {
+        "nextToken" : {
+          "shape" : "String"
+        },
+        "quantumSimulators" : {
+          "shape" : "QuantumSimulatorSummaryList"
+        }
+      }
+    },
+    "InputConfigList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "InputConfig"
+      }
+    },
+    "GetQuantumTaskResponse" : {
+      "type" : "structure",
+      "required" : [
+        "backendArn",
+        "created",
+        "ir",
+        "irType",
+        "modified",
+        "quantumTaskArn",
+        "shots",
+        "status"
+      ],
+      "members" : {
+        "backendArn" : {
+          "shape" : "Arn"
+        },
+        "backendParameters" : {
+          "shape" : "BackendParameters"
+        },
+        "backendTranslation" : {
+          "shape" : "String"
+        },
+        "created" : {
+          "shape" : "Long"
+        },
+        "ir" : {
+          "shape" : "String"
+        },
+        "irType" : {
+          "shape" : "IrType"
+        },
+        "modified" : {
+          "shape" : "Long"
+        },
+        "quantumTaskArn" : {
+          "shape" : "Arn"
+        },
+        "resultsS3Bucket" : {
+          "shape" : "String"
+        },
+        "resultsS3ObjectKey" : {
+          "shape" : "String"
+        },
+        "shots" : {
+          "shape" : "Integer"
+        },
+        "status" : {
+          "shape" : "QuantumTaskStatus"
+        },
+        "statusReason" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "DescribeQpusRequest" : {
+      "type" : "structure",
+      "members" : {
+        "maxResults" : {
+          "shape" : "Integer",
+          "location" : "querystring",
+          "locationName" : "maxResults",
+          "min" : 1,
+          "max" : 10
+        },
+        "nextToken" : {
+          "shape" : "String",
+          "location" : "querystring",
+          "locationName" : "nextToken"
+        },
+        "qpuArns" : {
+          "shape" : "ArnList",
+          "location" : "querystring",
+          "locationName" : "qpuArns",
+          "min" : 1,
+          "max" : 10
+        }
+      }
+    },
+    "QuantumJobMetricResult" : {
+      "type" : "structure",
+      "required" : [
+        "metricName",
+        "timestamp",
+        "value"
+      ],
+      "members" : {
+        "metricName" : {
+          "shape" : "String"
+        },
+        "timestamp" : {
+          "shape" : "Timestamp"
+        },
+        "value" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "ListQuantumJobsRequest" : {
+      "type" : "structure",
+      "members" : {
+        "maxResults" : {
+          "shape" : "Integer",
+          "location" : "querystring",
+          "locationName" : "maxResults",
+          "min" : 1,
+          "max" : 10
+        },
+        "nextToken" : {
+          "shape" : "String",
+          "location" : "querystring",
+          "locationName" : "nextToken"
+        }
+      }
+    },
+    "AnnealingModelParameters" : {
+      "type" : "structure",
+      "members" : {
+        "dWaveParameters" : {
+          "shape" : "DWaveParameters"
+        }
+      }
+    },
+    "QpuSummaryList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "QpuSummary"
+      }
+    },
+    "Double" : {
+      "type" : "double",
+      "box" : true
+    },
+    "Integer" : {
+      "type" : "integer",
+      "box" : true
+    },
+    "SimulatorStatus" : {
+      "type" : "string",
+      "enum" : [
+        "available",
+        "pending",
+        "running",
+        "shutting-down",
+        "terminated",
+        "unavailable"
+      ]
+    },
+    "DWaveParameters" : {
+      "type" : "structure",
+      "members" : {
+        "annealingDuration" : {
+          "shape" : "PositiveInteger"
+        },
+        "annealingOffsets" : {
+          "shape" : "DoubleList"
+        },
+        "annealingSchedule" : {
+          "shape" : "DoublePairList"
+        },
+        "autoScale" : {
+          "shape" : "Boolean"
+        },
+        "beta" : {
+          "shape" : "Double"
+        },
+        "chains" : {
+          "shape" : "IntegerListList"
+        },
+        "compensateFluxDrift" : {
+          "shape" : "Boolean"
+        },
+        "fluxBiases" : {
+          "shape" : "DoubleList"
+        },
+        "initialState" : {
+          "shape" : "IntegerList"
+        },
+        "maxResults" : {
+          "shape" : "PositiveInteger"
+        },
+        "postprocessingType" : {
+          "shape" : "DWavePostprocessingType"
+        },
+        "programmingThermalizationDuration" : {
+          "shape" : "Integer"
+        },
+        "readoutThermalizationDuration" : {
+          "shape" : "Integer"
+        },
+        "reduceIntersampleCorrelation" : {
+          "shape" : "Boolean"
+        },
+        "reinitializeState" : {
+          "shape" : "Boolean"
+        },
+        "resultFormat" : {
+          "shape" : "DWaveResultFormat"
+        },
+        "spinReversalTransformCount" : {
+          "shape" : "NonnegativeInteger"
+        }
+      }
+    },
+    "BackendParameters" : {
+      "type" : "structure",
+      "members" : {
+        "annealingModelParameters" : {
+          "shape" : "AnnealingModelParameters"
+        },
+        "gateModelParameters" : {
+          "shape" : "GateModelParameters"
+        }
+      }
+    },
+    "QuantumJobMetricResultList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "QuantumJobMetricResult"
+      }
+    },
+    "DoubleList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "Double"
+      }
+    },
+    "Boolean" : {
+      "type" : "boolean",
+      "box" : true
+    },
+    "ServiceQuotaExceededException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "ServiceQuotaExceededException",
+        "httpStatusCode" : 402,
+        "senderFault" : true
+      }
+    },
+    "QpuSummary" : {
+      "type" : "structure",
+      "required" : [
+        "arn",
+        "name"
+      ],
+      "members" : {
+        "arn" : {
+          "shape" : "Arn"
+        },
+        "name" : {
+          "shape" : "String"
+        },
+        "properties" : {
+          "shape" : "QpuProperties"
+        },
+        "status" : {
+          "shape" : "QpuStatus"
+        },
+        "statusReason" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "AnnealingModelProperties" : {
+      "type" : "structure",
+      "members" : {
+        "dWaveProperties" : {
+          "shape" : "DWaveProperties"
+        }
+      }
+    },
+    "CreateQuantumJobResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumJobArn"
+      ],
+      "members" : {
+        "quantumJobArn" : {
+          "shape" : "Arn"
+        }
+      }
+    },
+    "IntegerList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "Integer"
+      }
+    },
+    "GetQuantumJobResponse" : {
+      "type" : "structure",
+      "required" : [
+        "creationTime",
+        "jobStatus",
+        "outputDataConfig",
+        "quantumJobArn",
+        "resourceConfig",
+        "sagemakerRoleArn"
+      ],
+      "members" : {
+        "creationTime" : {
+          "shape" : "Timestamp"
+        },
+        "failureReason" : {
+          "shape" : "String"
+        },
+        "hyperParameters" : {
+          "shape" : "QuantumJobParameters"
+        },
+        "inputDataConfig" : {
+          "shape" : "InputConfigList",
+          "min" : 0,
+          "max" : 10
+        },
+        "jobEndTime" : {
+          "shape" : "Timestamp"
+        },
+        "jobStartTime" : {
+          "shape" : "Timestamp"
+        },
+        "jobStatus" : {
+          "shape" : "String"
+        },
+        "metricDefinitions" : {
+          "shape" : "QuantumJobMetricDefinitionsList"
+        },
+        "metricResults" : {
+          "shape" : "QuantumJobMetricResultList"
+        },
+        "outputDataConfig" : {
+          "shape" : "QuantumJobOutputConfig"
+        },
+        "quantumJobArn" : {
+          "shape" : "Arn"
+        },
+        "resourceConfig" : {
+          "shape" : "ResourceConfig"
+        },
+        "sagemakerRoleArn" : {
+          "shape" : "String"
+        },
+        "secondaryJobStatus" : {
+          "shape" : "String"
+        },
+        "vpcConfig" : {
+          "shape" : "QuantumJobVpcConfig"
+        }
+      }
+    },
+    "DescribeQpusResponse" : {
+      "type" : "structure",
+      "required" : [
+        "qpus"
+      ],
+      "members" : {
+        "nextToken" : {
+          "shape" : "String"
+        },
+        "qpus" : {
+          "shape" : "QpuSummaryList"
+        }
+      }
+    },
+    "FrontendQuantumTaskSummary" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTaskArn",
+        "status"
+      ],
+      "members" : {
+        "quantumTaskArn" : {
+          "shape" : "Arn"
+        },
+        "status" : {
+          "shape" : "QuantumTaskStatus"
+        }
+      }
+    },
+    "ConflictException" : {
+      "type" : "structure",
+      "members" : {
+        "message" : {
+          "shape" : "String"
+        }
+      },
+      "exception" : true,
+      "error" : {
+        "code" : "ConflictException",
+        "httpStatusCode" : 409,
+        "senderFault" : true
+      }
+    },
+    "ArnList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "Arn"
+      }
+    },
+    "ListQuantumTasksRequest" : {
+      "type" : "structure",
+      "members" : {
+        "maxResults" : {
+          "shape" : "ListQuantumTasksMaxResults",
+          "location" : "querystring",
+          "locationName" : "maxResults"
+        },
+        "nextToken" : {
+          "shape" : "String",
+          "location" : "querystring",
+          "locationName" : "nextToken"
+        }
+      }
+    },
+    "String" : {
+      "type" : "string"
+    },
+    "QuantumDeviceConnectivity" : {
+      "type" : "structure",
+      "required" : [
+        "connectivityGraph"
+      ],
+      "members" : {
+        "connectivityGraph" : {
+          "shape" : "QuantumDeviceConnectivityGraph"
+        }
+      }
+    },
+    "QuantumSimulatorSummary" : {
+      "type" : "structure",
+      "required" : [
+        "arn",
+        "name"
+      ],
+      "members" : {
+        "arn" : {
+          "shape" : "Arn"
+        },
+        "name" : {
+          "shape" : "String"
+        },
+        "qubitCount" : {
+          "shape" : "Integer"
+        },
+        "status" : {
+          "shape" : "SimulatorStatus"
+        },
+        "statusReason" : {
+          "shape" : "String"
+        },
+        "supportedQuantumOperations" : {
+          "shape" : "StringList"
+        }
+      }
+    },
+    "NonnegativeInteger" : {
+      "type" : "integer",
+      "min" : 0
+    },
+    "QuantumSimulatorSummaryList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "QuantumSimulatorSummary"
+      }
+    },
+    "QuantumJobVpcConfig" : {
+      "type" : "structure",
+      "required" : [
+        "securityGroupIds",
+        "subnets"
+      ],
+      "members" : {
+        "securityGroupIds" : {
+          "shape" : "StringList",
+          "min" : 1,
+          "max" : 10
+        },
+        "subnets" : {
+          "shape" : "StringList",
+          "min" : 1,
+          "max" : 10
+        }
+      }
+    },
+    "GetQuantumJobRequest" : {
+      "type" : "structure",
+      "required" : [
+        "quantumJobArn"
+      ],
+      "members" : {
+        "quantumJobArn" : {
+          "shape" : "Arn",
+          "location" : "uri",
+          "locationName" : "quantumJobArn"
+        }
+      }
+    },
+    "String64" : {
+      "type" : "string",
+      "pattern" : ".{1,64}"
+    },
+    "GateModelParameters" : {
+      "type" : "structure",
+      "required" : [
+        "qubitCount"
+      ],
+      "members" : {
+        "qubitCount" : {
+          "shape" : "Integer"
+        }
+      }
+    },
+    "QuantumDeviceConnectivityGraph" : {
+      "type" : "map",
+      "key" : {
+        "shape" : "String"
+      },
+      "value" : {
+        "shape" : "StringList"
+      }
+    },
+    "MetricDefinition" : {
+      "type" : "structure",
+      "required" : [
+        "name",
+        "regex"
+      ],
+      "members" : {
+        "name" : {
+          "shape" : "String"
+        },
+        "regex" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "DoublePairList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "DoublePair"
+      }
+    },
+    "InputConfig" : {
+      "type" : "structure",
+      "required" : [
+        "channelName",
+        "dataSource"
+      ],
+      "members" : {
+        "channelName" : {
+          "shape" : "String"
+        },
+        "dataSource" : {
+          "shape" : "JobDataSource"
+        }
+      }
+    },
+    "GetQuantumTaskRequest" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTaskArn"
+      ],
+      "members" : {
+        "quantumTaskArn" : {
+          "shape" : "Arn",
+          "location" : "uri",
+          "locationName" : "quantumTaskArn"
+        }
+      }
+    },
+    "QuantumJobOutputConfig" : {
+      "type" : "structure",
+      "required" : [
+        "s3OutputPath"
+      ],
+      "members" : {
+        "kmsKeyId" : {
+          "shape" : "String"
+        },
+        "s3OutputPath" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "PositiveInteger" : {
+      "type" : "integer",
+      "min" : 1
+    },
+    "Arn" : {
+      "type" : "string"
+    },
+    "JobS3DataSource" : {
+      "type" : "structure",
+      "required" : [
+        "s3DataType",
+        "s3Uri"
+      ],
+      "members" : {
+        "s3DataType" : {
+          "shape" : "S3DataType"
+        },
+        "s3Uri" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "CancelQuantumTaskResponse" : {
+      "type" : "structure",
+      "required" : [
+        "quantumTaskArn",
+        "status"
+      ],
+      "members" : {
+        "quantumTaskArn" : {
+          "shape" : "Arn"
+        },
+        "status" : {
+          "shape" : "QuantumTaskStatus"
+        }
+      }
+    },
+    "QuantumJobMetricDefinitionsList" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "MetricDefinition"
+      }
+    },
+    "DWaveProperties" : {
+      "type" : "structure",
+      "members" : {
+        "annealingDurationRange" : {
+          "shape" : "IntegerPair"
+        },
+        "annealingOffsetRanges" : {
+          "shape" : "DoublePairList"
+        },
+        "annealingOffsetStep" : {
+          "shape" : "Double"
+        },
+        "annealingOffsetStepPhi0" : {
+          "shape" : "Double"
+        },
+        "couplers" : {
+          "shape" : "IntegerPairList"
+        },
+        "defaultAnnealingDuration" : {
+          "shape" : "Integer"
+        },
+        "defaultProgrammingThermalizationDuration" : {
+          "shape" : "Integer"
+        },
+        "defaultReadoutThermalizationDuration" : {
+          "shape" : "Integer"
+        },
+        "extendedJRange" : {
+          "shape" : "DoublePair"
+        },
+        "hGainScheduleRange" : {
+          "shape" : "DoublePair"
+        },
+        "hRange" : {
+          "shape" : "DoublePair"
+        },
+        "jRange" : {
+          "shape" : "DoublePair"
+        },
+        "maximumAnnealingSchedulePoints" : {
+          "shape" : "Integer"
+        },
+        "maximumHGainSchedulePoints" : {
+          "shape" : "Integer"
+        },
+        "perQubitCouplingRange" : {
+          "shape" : "DoublePair"
+        },
+        "programmingThermalizationDurationRange" : {
+          "shape" : "IntegerPair"
+        },
+        "qubitCount" : {
+          "shape" : "Integer"
+        },
+        "qubits" : {
+          "shape" : "IntegerList"
+        },
+        "quotaConversionRate" : {
+          "shape" : "Double"
+        },
+        "readoutThermalizationDurationRange" : {
+          "shape" : "IntegerPair"
+        },
+        "shotsRange" : {
+          "shape" : "IntegerPair"
+        },
+        "taskRunDurationRange" : {
+          "shape" : "IntegerPair"
+        },
+        "topology" : {
+          "shape" : "DWaveTopology"
+        }
+      }
+    },
+    "Timestamp" : {
+      "type" : "timestamp"
+    },
+    "QuantumJobSummary" : {
+      "type" : "structure",
+      "members" : {
+        "creationTime" : {
+          "shape" : "Timestamp"
+        },
+        "jobEndTime" : {
+          "shape" : "Timestamp"
+        },
+        "jobStatus" : {
+          "shape" : "QuantumJobPrimaryStatus"
+        },
+        "quantumJobArn" : {
+          "shape" : "String"
+        }
+      }
+    },
+    "DoublePair" : {
+      "type" : "list",
+      "member" : {
+        "shape" : "Integer"
+      },
+      "min" : 2,
+      "max" : 2
+    },
+    "CreateQuantumJobRequest" : {
+      "type" : "structure",
+      "required" : [
+        "inputScriptConfig",
+        "jobName",
+        "outputDataConfig",
+        "resourceConfig",
+        "sagemakerRoleArn",
+        "stoppingCondition"
+      ],
+      "members" : {
+        "hyperParameters" : {
+          "shape" : "QuantumJobParameters"
+        },
+        "inputDataConfig" : {
+          "shape" : "InputConfigList",
+          "min" : 0,
+          "max" : 10
+        },
+        "inputScriptConfig" : {
+          "shape" : "S3SourceConfig"
+        },
+        "jobName" : {
+          "shape" : "String"
+        },
+        "metricDefinitions" : {
+          "shape" : "QuantumJobMetricDefinitionsList",
+          "min" : 0,
+          "max" : 10
+        },
+        "outputDataConfig" : {
+          "shape" : "QuantumJobOutputConfig"
+        },
+        "resourceConfig" : {
+          "shape" : "ResourceConfig"
+        },
+        "sagemakerRoleArn" : {
+          "shape" : "String"
+        },
+        "stoppingCondition" : {
+          "shape" : "QuantumJobStoppingCondition"
+        },
+        "vpcConfig" : {
+          "shape" : "QuantumJobVpcConfig"
+        }
+      }
+    },
+    "JobDataSource" : {
+      "type" : "structure",
+      "required" : [
+        "s3DataSource"
+      ],
+      "members" : {
+        "s3DataSource" : {
+          "shape" : "JobS3DataSource"
+        }
+      }
+    }
+  }
+}

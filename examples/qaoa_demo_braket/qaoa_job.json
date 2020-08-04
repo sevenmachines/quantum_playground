@@ -1,0 +1,25 @@
+{
+    "jobName": "qaoa-cli-20200401210628",
+    "sagemakerRoleArn": "arn:aws:iam::465542368797:role/AmazonBraketJobExecutionRole",
+    "inputScriptConfig": {
+        "scriptS3Bucket": "hybrid-job-mjas",
+        "scriptS3ObjectKey": "qaoa_braket.py"
+    },
+    "outputDataConfig": {
+        "s3OutputPath": "s3://hybrid-job-mjas/results"
+    },
+    "resourceConfig": {
+        "instanceType": "ml.m4.xlarge",
+        "instanceCount": 1,
+        "volumeSizeInGb": 30
+    },
+    "stoppingCondition": {
+        "maxRuntimeInSeconds": 86400
+    },
+    "metricDefinitions": [
+        {
+            "name": "cost_avg",
+            "regex": "cost_avg=(.*?);"
+        }
+    ]
+}
